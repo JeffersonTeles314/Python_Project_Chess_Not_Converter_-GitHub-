@@ -1,17 +1,18 @@
 # Abrir Aquivo para Ler - lo
 
 def read_TXT():
-    dfsd = ""
-    with open("chesstxt.txt", "r") as FINAL_FILE:
+    with open("chesstxt.txt", "r", encoding="utf8") as FINAL_FILE:
         dfsd = FINAL_FILE.readline()
-    return dfsd
+        return dfsd
 
 def Write_TXT(inputtxt):
-    with open("chesstxt.txt", "a") as FINAL_FILE:
+    with open("chesstxt.txt", "a", encoding="utf8") as FINAL_FILE:
         FINAL_FILE.write("\n"+inputtxt)
 
 def convertstr(var_vig):
-    # Rei 
+    # Peão
+
+    # Rei
     if 'R' in var_vig: 
         var_vig = var_vig.replace('R', 'K') 
     # Rainha 
@@ -28,4 +29,5 @@ def convertstr(var_vig):
     return var_vig
 
 var1 = read_TXT()
+var1 = convertstr(var1)
 Write_TXT(var1)
