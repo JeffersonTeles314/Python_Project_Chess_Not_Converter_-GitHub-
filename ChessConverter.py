@@ -1,15 +1,16 @@
+# Abrir Aquivo para Ler - lo
 
 def read_TXT():
-    return
+    dfsd = ""
+    with open("chesstxt.txt", "r") as FINAL_FILE:
+        dfsd = FINAL_FILE.readline()
+    return dfsd
 
-def Write_TXT(strtxt,nometxt):
-    FINAL_FILE = open(str(title)+".txt", "x")
-    for linha in textlist:
-        FINAL_FILE.write(linha)
-    FINAL_FILE.close()
+def Write_TXT(inputtxt):
+    with open("chesstxt.txt", "a") as FINAL_FILE:
+        FINAL_FILE.write("\n"+inputtxt)
 
 def convertstr(var_vig):
-    var_vig = str(input("Pgn: ")) 
     # Rei 
     if 'R' in var_vig: 
         var_vig = var_vig.replace('R', 'K') 
@@ -25,3 +26,6 @@ def convertstr(var_vig):
     if 'C' in var_vig: 
         var_vig = var_vig.replace('C', 'N') 
     return var_vig
+
+var1 = read_TXT()
+Write_TXT(var1)
