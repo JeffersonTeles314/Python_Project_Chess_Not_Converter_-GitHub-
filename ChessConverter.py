@@ -1,4 +1,12 @@
 
+def read_TXT():
+    return
+
+def Write_TXT(strtxt,nometxt):
+    FINAL_FILE = open(str(title)+".txt", "x")
+    for linha in textlist:
+        FINAL_FILE.write(linha)
+    FINAL_FILE.close()
 
 def convertstr(var_vig):
     var_vig = str(input("Pgn: ")) 
