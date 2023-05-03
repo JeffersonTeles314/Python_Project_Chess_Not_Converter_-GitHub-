@@ -1,5 +1,4 @@
 # Abrir Aquivo para Ler - lo
-
 def read_TXT():
     with open("chesstxt.txt", "r", encoding="utf8") as FINAL_FILE:
         dfsd = FINAL_FILE.readline()
